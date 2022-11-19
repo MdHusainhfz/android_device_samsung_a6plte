@@ -15,7 +15,7 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Dynamic partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+#PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -24,8 +24,9 @@ PRODUCT_PACKAGES += \
 
 # qcom decryption
 PRODUCT_PACKAGES += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
+    qcom_decrypt
+#
+    #qcom_decrypt_fbe
 
 # Dependencies
 TARGET_RECOVERY_DEVICE_MODULES += \
@@ -40,10 +41,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Screen
 TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_HEIGHT := 2220
 
 # Copy modules for depmod
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/sec_cmd.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/sec_cmd.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/sec_common_fn.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/sec_common_fn.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/sec_secure_touch.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/sec_secure_touch.ko \
